@@ -1,5 +1,22 @@
 
 
+body.light-mode {
+    background-color: #ffffff; /* white background */
+    color: #000000; /* black text */
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode #theme-icon {
+    color: #ffffff;
+}
+
+body.dark-mode .social-icons a {
+    color: #ffffff;
+}
 .main-container{
     font-family: 'Inter', sans-serif;
     padding-top: 5rem;
@@ -10,11 +27,21 @@
     width: 30%;
     text-align: center;
 }
-.profile-pic{
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    object-fit: cover;
+
+.left-panel h2{
+    font-size: 1.5rem;
+}
+.left-panel p{
+    font-size: 0.9rem;
+}
+.profile-pic {
+    width: 80%;           
+    max-width: 20rem;     
+    aspect-ratio: 1 / 1;  
+    border-radius: 50%;   
+    object-fit: cover;    
+    display: block;       
+    margin: 0 auto;       
 }
 .social-icons {
     margin-top: 20px;
@@ -25,19 +52,43 @@
 .social-icons a {
     font-size: 2rem;
     color: #000;
+    transition: color 0.3s ease;
+}
+
+.social-icons a[href*="linkedin"]:hover {
+    color: #0077b5;
+}
+
+.social-icons a[href*="instagram"]:hover i {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s ease;
+}
+
+.social-icons a[href*="mailto"]:hover {
+    color: #d44638;
 }
 
 .right-panel {
     width: 50%;
     padding-left: 5rem;
 }
+.right-panel h2 {
+    font-size: 1.3rem;
+}
+.right-panel h3 {
+    font-size: 1.1rem;
+}
+.right-panel p {
+    font-size: 0.9rem;
+}
 
 .sunmoon {
     text-align: right;
 }
 #theme-icon {
-    font-size:2rem;
-    
+    font-size:2rem;  
 }
 
 .additional {
@@ -51,3 +102,4 @@
 .education{
 
 }
+

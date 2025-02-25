@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
     <!--main section, class for left and right, right needs to break off into bio, interests, education -->
     <div class="main-container">
         <!--left side-->
@@ -70,5 +70,28 @@
 
         </div>
     </div>
+    <!-- add javascript to the html before closing body tag-->
+    <script>
+        // grab the current icon from the page first
+        const themeIcon = document.getElementById('theme-icon');
+        console.log(themeIcon);
+
+        // check if the current icon gets clicked on
+        themeIcon.addEventListener('click', () => {
+            console.log("Icon clicked!");
+            // check what mode it is
+            if (document.body.classList.contains('dark-mode')) {
+                // switch to light mode
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                // switch to dark mode
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        })
+    </script>
 </body>
 </html>
